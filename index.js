@@ -61,6 +61,15 @@ async function run() {
 
 
 
+        // all mobiles 
+        app.get('/allItems', async (req, res) => {
+            const query = {};
+            const allItems = await usedMobileCollection.find(query).toArray();
+            res.send(allItems);
+        })
+
+       
+
 
     }
 
