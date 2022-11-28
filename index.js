@@ -1,89 +1,109 @@
-const express = require('express')
+const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
-require('dotenv').config();
-
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+// const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
-const port = process.env.PORT || 5000 ;
+require('dotenv').config();
+const port = process.env.PORT || 5000;
+
+
 
 // middleware 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-// database connection
+
+
+
+// db codeed 
+
+
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.u82gun1.mongodb.net/?retryWrites=true&w=majority`;
+console.log(uri)
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
+async function run() {
+    try {
+        const usedMobileCollection = client.db('usedMobileResaler').collection('usedMobiles');
+        const categoryCollection = client.db('usedMobileResaler').collection('mobileCategory');
+        const bookingsCollection = client.db('usedMobileResaler').collection('bookings');
 
 
-async function run(){
-    try{
-        const carCollection = client.db('CarProducts').collection('catCategories');
-        const luxuryCarCollection = client.db('CarProducts').collection('LuxuryCar');
-        const electricCarCollection = client.db('CarProducts').collection('electricCars');
-      
+        // category 
+        app.get('/mobileCategory', async (req, res) => {
+            const query = {};
+            const mobileCategory = await categoryCollection.find(query).toArray();
+            res.send(mobileCategory);
+        });
 
 
-   // for home page service find  query
-         app.get('/categories', async(req, res)=>{
-            const query = {} 
-            const cursor = carCollection.find(query);
-            const categories  = await cursor.limit(3).toArray();
-            res.send(categories);
-        })
-        // for microbus 
-        app.get('/microbusCar', async(req, res)=>{
-            const query = {} 
-            const cursor = luxuryCarCollection.find(query);
-            const categories  = await cursor.limit(3).toArray();
-            res.send(categories);
+        // bookings collection 
+        app.get('/bookings', async (req, res) => {
+            const email = req.query.email;
+            const query = { email: email };
+            const bookings = await bookingsCollection.find(query).toArray();
+            res.send(bookings);
         })
 
-        app.get('/electricCars', async(req, res)=>{
-            const query = {} 
-            const cursor = electricCarCollection.find(query);
-            const categories  = await cursor.limit(3).toArray();
-            res.send(categories);
+
+        app.post('/bookings', async (req, res) => {
+            const booking = req.body;
+            console.log(booking);
+            const result = await bookingsCollection.insertOne(booking);
+            res.send(result);
         })
-    
-    
-        
-    
-      
-      
-        // see all service 
-        // app.get('/allService', async(req, res)=>{
-        //     const query = {} 
-        //     const cursor = serviceCollection.find(query);
-        //     const services  = await cursor.toArray();
-        //     res.send(services);
-        // })
-    
-       // service details api 
-    
-        app.get('/services/:id', async (req, res)=>{
+
+
+
+
+
+
+
+        // all mobiles 
+        app.get('/allItems', async (req, res) => {
+            const query = {};
+            const allItems = await usedMobileCollection.find(query).toArray();
+            res.send(allItems);
+        })
+
+        app.get('/showAllMobile/:id', async (req, res) => {
             const id = req.params.id;
-            const query = {_id: ObjectId(id)};
-            const service = await serviceCollection.findOne(query) ;
-            res.send(service)
-        })
-       
-       
-    
+            const query = { category_id: ObjectId(id) };
+            const allMobiles = await usedMobileCollection.find(query).toArray();
+            res.send(allMobiles);
+        });
+
+
+        app.get('/category/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const mobileCategory = await usedMobileCollection.find(query).toArray();
+            res.send(mobileCategory);
+        });
+
+
+
     }
-    finally{
-    
+
+    finally {
+
     }
-    }
-    run().catch(err=>console.log(err))
+};
+run().catch(err => console.error(err));
 
 
 
-app.get('/', (req, res)=>{
-    res.send('Food service project running !!')
-})
 
-app.listen(port, ()=>{
-    console.log(`Car selling & buying website running ! ${port}`)
+
+
+// server testing
+app.get('/', (req, res) => {
+    res.send('server is running now');
+});
+
+
+app.listen(port, () => {
+    console.log(`server is running now on port ${port}`)
 })

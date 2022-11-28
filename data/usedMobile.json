@@ -1,0 +1,164 @@
+[
+    {
+      "category_id": 1,
+      "name": "iPhone 14 Pro Max",
+      "location": "Balagonj",
+      "originalPrice": 150000,
+      "resalePrice": 90000,
+      "yearsOfUsed": 2,
+      "publishDate": "03-08-22",
+      "information": "Many smartphone-savvy consumers might argue that the joy of purchasing a second hand phone is nothing compared to the excitement of unwrapping a brand new",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-se-3rd-gen-colors.png"
+    },
+    {
+      "category_id": 1,
+      "name": "iPhone 14 Pro",
+      "location": "USA",
+      "originalPrice": 160000,
+      "resalePrice": 80000,
+      "yearsOfUsed": 2,
+      "publishDate": "04-07-22",
+      "information": "mobile device that packs in the latest technology & features and looks unbelievably irresistible with its scratch free and gleaming body smartly encased in a stylish box!",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-colors.png"
+    },
+    {
+      "category_id": 1,
+      "name": "iPhone 14 Plus",
+      "location": "Japan",
+      "originalPrice": 200000,
+      "resalePrice": 100000,
+      "yearsOfUsed": 2,
+      "publishDate": "05-12-21",
+      "information": "However, buying a new phone may not be a viable option every time, more so if you are a self-proclaimed gadget freak who is always on the lookout for the latest models",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-plus-colors.png"
+    },
+    {
+      "category_id": 2,
+      "name": "Xiaomi Redmi Note 11 SE",
+      "location": "Balagonj",
+      "originalPrice": 30000,
+      "resalePrice": 20000,
+      "yearsOfUsed": 2,
+      "publishDate": "05-06-22",
+      "information": "Indeed, there are times when buying a second hand mobile or a pre-owned phone is far more economical than embracing a new one, particularly",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-8-2.jpg"
+    },
+    {
+      "category_id": 2,
+      "name": "Xiaomi Redmi 11 Prime 5G",
+      "location": "America",
+      "originalPrice": 38000,
+      "resalePrice": 33000,
+      "yearsOfUsed": 2,
+      "publishDate": "02-02-22",
+      "information": " when you do not intend to splurge on high-end mobile phones. This could be either due to the fact that you are cash-strapped or because you realise that it is only",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WLs16HZhbW_frZaMbRvrDcptTzWp0JC1kL7qsaeid_Dsxt2ZMr7gn4lcavRHBP7B3WM&usqp=CAU"
+    },
+    {
+      "category_id": 2,
+      "name": "Xiaomi Redmi 10",
+      "location": "Qatar",
+      "originalPrice": 47000,
+      "resalePrice": 39000,
+      "yearsOfUsed": 2,
+      "publishDate": "15-05-22",
+      "information": "You should also know when it is time for an upgrade to a new smartphone. Whatever be your reasons to opt for a used smartphone, you must remember",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://www.kindpng.com/picc/m/504-5043621_xiaomi-mi-cc9-pro-hd-png-download.png"
+    },
+    {
+      "category_id": 3,
+      "name": "OPPO A54",
+      "location": "Quria",
+      "originalPrice": 20000,
+      "resalePrice": 1500,
+      "yearsOfUsed": 2,
+      "publishDate": "01-09-22",
+      "information": "that purchasing a used or second hand device can be a tricky affair, what with the market flooded with plenty of faulty and fake cell phones.",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://www.gizbot.com/images/2018-08/oppo-f9-pro_1534846912110.jpg"
+    },
+    {
+      "category_id": 3,
+      "name": "OPPO F19",
+      "location": "Chinnee",
+      "originalPrice": 16000,
+      "resalePrice": 9000,
+      "yearsOfUsed": 2,
+      "publishDate": "27-11-21",
+      "information": "Considering that second hand mobile phones can also have their fair share of wear and tear and often do not boast any warranty cover, due diligence of",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://www.kindpng.com/picc/m/193-1930143_oppo-ax7-hd-png-download.png"
+    },
+    {
+      "category_id": 3,
+      "name": "OPPO Reno6",
+      "location": "Balagonj",
+      "originalPrice": 13000,
+      "resalePrice": 1000,
+      "yearsOfUsed": 2,
+      "publishDate": "29-12-21",
+      "information": "the used handsets becomes non-negotiable if you do not wish to bring home a device that’s nothing but a rip-off.",
+      "author": [
+        {
+          "authorName": "Ibrahim Sikder",
+          "authorImg": "",
+          "review": "5 Start"
+        }
+      ],
+      "mobileImg": "https://www.gizbot.com/images/2019-07/oppo-k3_1562397583100.jpg"
+    }
+  ]
